@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 let quizData = require("./quiz_data.json");
 
-class Quizz extends Component {
+class Quiz extends Component {
   /// cuando se usan clases el constructor necesita injeccion de los props
   // esto es como angular, pero solo para los outputs
   constructor(props) {
@@ -26,4 +26,4 @@ class Quizz extends Component {
   }
 }
 
-export default Quizz;
+export default Quiz;
