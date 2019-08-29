@@ -16,16 +16,14 @@ class Quizz extends Component {
   //// siempre devuelve render porque es el output de la clase, este es el template
   /// es requerido y atencion a la sintaxis render(){  return }
   render() {
-    return(
-        <div>
+    return (
+      <div>
         <div className="QuizQuestion">
-            {quizData.quiz_questions[0].instruction_text}
+          {quizData.quiz_questions[0].instruction_text}
         </div>
-    </div>
+      </div>
     );
   }
-
-
 }
 
 export default Quizz;
