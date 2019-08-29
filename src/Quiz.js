@@ -20,7 +20,7 @@ class Quiz extends Component {
   /// es requerido y atencion a la sintaxis render(){  return }
   render() {
 
-    const isQuizEnd = true //( (this.state.quiz_position-1) === quizData.quiz_questions.length)
+    const isQuizEnd = ( (this.state.quiz_position-1) === quizData.quiz_questions.length)
     return (
       <div>
         {isQuizEnd?<QuizEnd />:
