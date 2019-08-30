@@ -16,6 +16,14 @@ class Quiz extends Component {
 
   }
 
+  showNextQuestion(){
+    this.setState ( (state)=>{
+      return (
+        {quiz_position: state.quiz_position + 1}
+      )
+    })
+  }
+
   //// siempre devuelve render porque es el output de la clase, este es el template
   /// es requerido y atencion a la sintaxis render(){  return }
   render() {
@@ -24,7 +32,10 @@ class Quiz extends Component {
     return (
       <div>
         {isQuizEnd?<QuizEnd />:
-        <QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position-1]} />}
+        <QuizQuestion 
+        quiz_question={quizData.quiz_questions[this.state.quiz_position-1]} 
+        showNextQuestionHandler={this.showNextQuestion.bind(this)}
+        />}
         
       </div>
     );
